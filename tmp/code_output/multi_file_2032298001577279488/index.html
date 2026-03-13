@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-tasks"></i> Task Tracker</h1>
+        <p>Keep track of your daily tasks and stay organized.</p>
+    </header>
+    <main>
+        <section class="task-form">
+            <h2>Add New Task</h2>
+            <form id="taskForm">
+                <input type="text" id="taskTitle" placeholder="Task title (e.g., Buy groceries)" required>
+                <textarea id="taskDescription" placeholder="Task description (optional)"></textarea>
+                <div class="form-row">
+                    <input type="date" id="taskDueDate">
+                    <select id="taskPriority">
+                        <option value="low">Low Priority</option>
+                        <option value="medium" selected>Medium Priority</option>
+                        <option value="high">High Priority</option>
+                    </select>
+                </div>
+                <button type="submit"><i class="fas fa-plus"></i> Add Task</button>
+            </form>
+        </section>
+        <section class="task-list">
+            <h2>Your Tasks</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            <ul id="taskList">
+                <!-- Tasks will be dynamically added here -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Task Tracker. Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
